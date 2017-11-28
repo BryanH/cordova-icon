@@ -1,6 +1,6 @@
 # cordova-icon
 
-<img src="cordova-icon-resize.png"/>
+<img src="cordova-icon-resize.png" />
 
 Automatic icon resizing for Cordova. Create an icon in the root folder of your Cordova project and use cordova-icon to automatically resize and copy it for all the platforms your project supports (currenty works with iOS, Android, Windows 10 and OSX).
 
@@ -11,7 +11,7 @@ $ sudo apt-get install imagemagick
 $ # on Mac: brew install imagemagick
 $ # on Windows: http://www.imagemagick.org/script/binary-releases.php#windows (check "Legacy tools")
 
-$ sudo npm install cordova-icon -g
+$ yarn add cordova-icon
 ```
 
 ### Requirements
