@@ -234,6 +234,7 @@ var generateIcon = function (platform, icon) {
   } , function(err, stdout, stderr){
     if (err) {
       deferred.reject(err);
+	  display.error('Failed to create ' + icon.name);
     } else {
       if (icon.name === 'icon-1024.png' && platform.name === 'ios') {
        // https://stackoverflow.com/questions/2322750/replace-transparency-in-png-images-with-white-background
@@ -309,6 +310,10 @@ var generateIcons = function (platforms) {
   });
   Q.all(all).then(function () {
     deferred.resolve();
+  }).catch(function (err) {
+    if (err) {
+      deferred.reject(err);
+    }
   });
   return deferred.promise;
 };
